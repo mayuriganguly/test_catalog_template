@@ -73,10 +73,7 @@
       "volume_mounts": [],
       "parameters": [
         {
-          "name": "MONGO_PASS"
-        },
-        {
-          "name": "MONGO_USER"
+          "name": "SERVICE_MONGO_USER"
         },
         {
           "name": "MONGODB_PASS"
@@ -89,27 +86,12 @@
   ],
   "parameters": [
     {
-      "name": "MONGO_USER",
+      "name": "SERVICE_MONGO_USER",
       "description": "Mongo user used by the sidecar",
       "example": "admin",
       "required": true,
       "secret": false,
       "default": "admin"
-    },
-    {
-      "name": "MONGO_PASS",
-      "description": "Mongo password used by the sidecar",
-      "example": "changeme",
-      "required": true,
-      "secret": false,
-      "generator":
-        {
-          "id": "MONGO_PASS",
-          "generate":
-            {
-              "type": "Password"
-            }
-        }
     },
     {
       "name": "CSM_API_KEY",

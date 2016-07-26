@@ -72,16 +72,16 @@
       "volume_mounts": [],
       "parameters": [
         {
-          "name": "POSTGRES_DBNAME"
+          "name": "SERVICE_POSTGRES_DBNAME"
         },
         {
-          "name": "POSTGRES_USER"
+          "name": "SERVICE_POSTGRES_USER"
         },
         {
           "name": "POSTGRES_PASSWORD"
         },
         {
-          "name": "POSTGRES_SSLMODE"
+          "name": "SERVICE_POSTGRES_SSLMODE"
         },
         {
           "name": "CSM_API_KEY"
@@ -91,7 +91,7 @@
   ],
   "parameters": [
     {
-      "name": "POSTGRES_USER",
+      "name": "SERVICE_POSTGRES_USER",
       "description": "Postgres user used by the sidecar",
       "example": "postgres",
       "required": true,
@@ -99,7 +99,7 @@
       "default": "postgres"
     },
     {
-      "name": "POSTGRES_DBNAME",
+      "name": "SERVICE_POSTGRES_DBNAME",
       "description": "Postgres database name",
       "example": "postgres",
       "required": true,
@@ -107,22 +107,7 @@
       "default": "postgres"
     },
     {
-      "name": "POSTGRES_PASSWORD",
-      "description": "Postgres password used by the sidecar",
-      "example": "changeme",
-      "required": true,
-      "secret": false,
-      "generator":
-        {
-          "id": "POSTGRES_PASSWORD",
-          "generate":
-            {
-              "type": "Password"
-            }
-        }
-    },
-    {
-      "name": "POSTGRES_SSLMODE",
+      "name": "SERVICE_POSTGRES_SSLMODE",
       "description": "Postgres port the sidecar will connect to",
       "example": "disable",
       "required": true,
@@ -135,6 +120,21 @@
       "example": "my-secret-key",
       "required": true,
       "secret": false
+    },
+    {
+      "name": "POSTGRES_PASSWORD",
+      "description": "Postgres password used by the server",
+      "example": "changeme",
+      "required": true,
+      "secret": false,
+      "generator":
+        {
+          "id": "POSTGRES_PASSWORD",
+          "generate":
+            {
+              "type": "Password"
+            }
+        }
     }
   ]
 }

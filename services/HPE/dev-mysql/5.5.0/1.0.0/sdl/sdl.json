@@ -73,10 +73,10 @@
       "volume_mounts": [],
       "parameters": [
         {
-          "name": "MYSQL_USER"
+          "name": "SERVICE_MYSQL_USER"
         },
         {
-          "name": "MYSQL_PASS"
+          "name": "MYSQL_ROOT_PASSWORD"
         },
         {
           "name": "CSM_API_KEY"
@@ -101,27 +101,12 @@
         }
     },
     {
-      "name": "MYSQL_USER",
+      "name": "SERVICE_MYSQL_USER",
       "description": "MySQL user used by the sidecar",
       "example": "root",
       "required": true,
       "secret": false,
       "default": "root"
-    },
-    {
-      "name": "MYSQL_PASS",
-      "description": "MySQL password used by the sidecar",
-      "example": "changeme",
-      "required": true,
-      "secret": false,
-      "generator":
-        {
-          "id": "MYSQL_PASS",
-          "generate":
-            {
-              "type": "Password"
-            }
-        }
     },
     {
       "name": "CSM_API_KEY",
