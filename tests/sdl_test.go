@@ -53,6 +53,10 @@ type serviceConfig struct {
 
 func TestSDLsAreValid(t *testing.T) {
 	servicesRoot := "../services"
+	skipSDLValidation, ok := os.LookupEnv("SKIP_SDL_VALIDATION")
+	if !ok {
+		skipSDLValidation = ""
+	}
 
 	for _, vendor := range listDirs(t, servicesRoot) {
 		vendorPath := servicesRoot + "/" + vendor.Name()
@@ -104,6 +108,11 @@ func TestSDLsAreValid(t *testing.T) {
 
 				if len(verSet) > 1 {
 					assert.NotEmpty(t, c.DefaultServiceVersion, "found more than 1 version and default_service_version is not set in config.json")
+				}
+
+				if strings.Contains(skipSDLValidation, serviceName.Name()) {
+					t.Log("***** WARNING - " + serviceName.Name() + " - skipped SDL validation")
+					continue
 				}
 
 				for _, sdlVersionDir := range listDirs(t, productVersionPath) {
@@ -168,9 +177,6 @@ func TestSDLsAreValid(t *testing.T) {
 							compParams = append(compParams, param)
 						}
 					}
-
-					//check that a csm-side-car container exists in components
-					assert.Contains(t, compNames, "csm-side-car", "SDL needs a csm-side-car defined")
 
 					//check the parameter name and description are not equal and that all SDL parameters are used in components
 					for _, param := range s.Parameters {
