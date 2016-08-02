@@ -1,0 +1,92 @@
+{
+  "name": "dev-sql-server",
+  "product_version": "2014.0.0",
+  "sdl_version": "1.0.0",
+  "vendor": "HPE",
+  "volumes": [],
+  "components": [
+    {
+      "name": "csm-side-car",
+      "external_name": "mssql-csm-side-car",
+      "workload_type": "container",
+      "version": "latest",
+      "vendor": "HPE",
+      "image": "docker-registry.helion.space:443/catalog-service-manager/csm-dev-mssql:latest",
+      "min_RAM_mb": 50,
+      "min_disk_gb": 1,
+      "min_VCPU": 1,
+      "platform": "linux-x86_64",
+      "capabilities": [],
+      "affinity": [],
+      "labels": ["mssql-csm"],
+      "min_instances": 1,
+      "max_instances": 1,
+      "service_ports": [
+        {
+          "name": "mssql-csm",
+          "protocol": "TCP",
+          "source_port": 8081,
+          "target_port": 8081,
+          "public": true
+        }
+      ],
+      "volume_mounts": [],
+      "parameters": [
+        {
+          "name": "MSSQL_HOST"
+        },
+		{
+          "name": "MSSQL_PORT"
+        },
+		{
+          "name": "MSSQL_USER"
+        },
+        {
+          "name": "MSSQL_PASS"
+        },
+        {
+          "name": "CSM_API_KEY"
+        }
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "MSSQL_HOST",
+      "description": "MSSQL host used by the sidecar",
+      "example": "sqlserver.test",
+      "required": true,
+      "secret": false
+    },
+	{
+      "name": "MSSQL_PORT",
+      "description": "MSSQL port used by the sidecar",
+      "example": "1433",
+      "required": true,
+      "secret": false,
+      "default": "1433"
+    },
+	{
+      "name": "MSSQL_USER",
+      "description": "MSSQL user used by the sidecar",
+      "example": "sa",
+      "required": true,
+      "secret": false,
+      "default": "sa"
+    },
+    {
+      "name": "MSSQL_PASS",
+      "description": "MSSQL password used by the sidecar",
+      "example": "changeme",
+      "required": true,
+      "secret": false
+    },
+    {
+      "name": "CSM_API_KEY",
+      "description": "API Key used to authenticate consumers of the sidecar API",
+      "example": "my-secret-key",
+      "required": true,
+      "secret": false
+    }
+  ]
+}
