@@ -96,7 +96,8 @@
           "id": "MYSQL_ROOT_PASSWORD",
           "generate":
             {
-              "type": "Password"
+              "type": "Password",
+              "characters": "abcdefghijklmnopqrstuvwxyz1234567890"
             }
         }
     },

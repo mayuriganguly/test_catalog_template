@@ -33,22 +33,22 @@
       "volume_mounts": [],
       "parameters": [
         {
-          "name": "POSTGRES_HOST"
+          "name": "SERVICE_POSTGRES_HOST"
         },
         {
-          "name": "POSTGRES_PORT"
+          "name": "SERVICE_POSTGRES_PORT"
         },
         {
-          "name": "POSTGRES_DBNAME"
+          "name": "SERVICE_POSTGRES_DBNAME"
         },
         {
-          "name": "POSTGRES_USER"
+          "name": "SERVICE_POSTGRES_USER"
         },
         {
-          "name": "POSTGRES_PASSWORD"
+          "name": "SERVICE_POSTGRES_PASSWORD"
         },
         {
-          "name": "POSTGRES_SSLMODE"
+          "name": "SERVICE_POSTGRES_SSLMODE"
         },
         {
           "name": "CSM_API_KEY"
@@ -58,21 +58,21 @@
   ],
   "parameters": [
     {
-      "name": "POSTGRES_HOST",
+      "name": "SERVICE_POSTGRES_HOST",
       "description": "RDS endpoint DNS Name for postgres database",
       "example": "postgres",
       "required": true,
       "secret": false
     },
     {
-      "name": "POSTGRES_PORT",
+      "name": "SERVICE_POSTGRES_PORT",
       "description": "RDS endpoint port for postgres database",
       "example": "postgres",
       "required": true,
       "secret": false
     },
     {
-      "name": "POSTGRES_USER",
+      "name": "SERVICE_POSTGRES_USER",
       "description": "Postgres master username",
       "example": "postgres",
       "required": true,
@@ -80,7 +80,7 @@
       "default": "postgres"
     },
     {
-      "name": "POSTGRES_DBNAME",
+      "name": "SERVICE_POSTGRES_DBNAME",
       "description": "Postgres database name",
       "example": "postgres",
       "required": true,
@@ -88,14 +88,14 @@
       "default": "postgres"
     },
     {
-      "name": "POSTGRES_PASSWORD",
+      "name": "SERVICE_POSTGRES_PASSWORD",
       "description": "Postgres master password",
       "example": "changeme",
       "required": true,
       "secret": false
     },
     {
-      "name": "POSTGRES_SSLMODE",
+      "name": "SERVICE_POSTGRES_SSLMODE",
       "description": "SSL for postgress connection",
       "example": "disable",
       "required": true,
