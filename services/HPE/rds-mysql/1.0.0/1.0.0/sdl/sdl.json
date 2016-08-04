@@ -33,16 +33,16 @@
       "volume_mounts": [],
       "parameters": [
         {
-          "name": "MYSQL_HOST"
+          "name": "SERVICE_MYSQL_HOST"
         },
         {
-          "name": "MYSQL_PORT"
+          "name": "SERVICE_MYSQL_PORT"
         },
         {
-          "name": "MYSQL_USER"
+          "name": "SERVICE_MYSQL_USER"
         },
         {
-          "name": "MYSQL_PASS"
+          "name": "SERVICE_MYSQL_PASS"
         },
         {
           "name": "CSM_API_KEY"
@@ -52,21 +52,22 @@
   ],
   "parameters": [
     {
-      "name": "MYSQL_HOST",
+      "name": "SERVICE_MYSQL_HOST",
       "description": "RDS endpoint DNS name for MySQL database",
       "example": "mysql",
       "required": true,
       "secret": false
     },
     {
-      "name": "MYSQL_PORT",
+      "name": "SERVICE_MYSQL_PORT",
       "description": "RDS endpoint port for MySQL database",
-      "example": "mysql",
+      "example": "3306",
+      "default": "3306",
       "required": true,
       "secret": false
     },
     {
-      "name": "MYSQL_USER",
+      "name": "SERVICE_MYSQL_USER",
       "description": "MySQL user used by the sidecar",
       "example": "root",
       "required": true,
@@ -74,7 +75,7 @@
       "default": "root"
     },
     {
-      "name": "MYSQL_PASS",
+      "name": "SERVICE_MYSQL_PASS",
       "description": "MySQL password used by the sidecar",
       "example": "changeme",
       "required": true,

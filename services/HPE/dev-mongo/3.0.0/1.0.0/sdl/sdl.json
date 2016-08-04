@@ -111,7 +111,8 @@
           "id": "MONGODB_PASS",
           "generate":
             {
-              "type": "Password"
+              "type": "Password",
+              "characters": "abcdefghijklmnopqrstuvwxyz1234567890"
             }
         }
     }
