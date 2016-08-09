@@ -138,6 +138,7 @@ func TestSDLsAreValid(t *testing.T) {
 					assert.Nil(t, err, "unmarshalling the sdl failed")
 
 					//check contents match version and vendor directories
+					assert.Equal(t, serviceName.Name(), s.Name, "service name does not match in sdl and directory")
 					assert.Equal(t, vendor.Name(), s.Vendor, "vendor name does not match in sdl and directory")
 					assert.Contains(t, verSet, s.SdlVersion, "version in sdl does not match dir its in")
 					assert.True(t, govalidator.IsSemver(s.SdlVersion), "SDL version specified in sdl is not of semver format")
