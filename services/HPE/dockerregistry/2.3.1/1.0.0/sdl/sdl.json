@@ -57,7 +57,7 @@
                     "protocol": "TCP",
                     "source_port": 8081,
                     "target_port": 8081,
-                    "public": true
+                    "public": false
                 }
             ],
             "parameters": [
