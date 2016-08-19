@@ -12,7 +12,6 @@
   "components": [
     {
       "name": "mongo",
-      "external_name": "mongo",
       "workload_type": "container",
       "version": "latest",
       "vendor": "HPE",
@@ -47,7 +46,6 @@
     },
     {
       "name": "csm-side-car",
-      "external_name": "mongo-csm-side-car",
       "workload_type": "container",
       "version": "latest",
       "vendor": "HPE",

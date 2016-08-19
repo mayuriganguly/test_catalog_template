@@ -86,7 +86,6 @@
      "name": "hce-ha",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "hce-ha",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-ha:kosher-prod",
       "min_RAM_mb": 256,
@@ -118,7 +117,6 @@
       "name": "pxc-node1",
       "version": "5.6",
       "vendor": "percona",
-      "external_name": "pxc-node1",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-mysql:ee53620ceffb041f3df65a594e35fce79d9fc593",
       "entrypoint": [
@@ -215,7 +213,6 @@
       "name": "pxc-node2",
       "version": "5.6",
       "vendor": "percona",
-      "external_name": "pxc-node2",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-mysql:ee53620ceffb041f3df65a594e35fce79d9fc593",
       "entrypoint": [
@@ -312,7 +309,6 @@
       "name": "pxc-node3",
       "version": "5.6",
       "vendor": "percona",
-      "external_name": "pxc-node3",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-mysql:ee53620ceffb041f3df65a594e35fce79d9fc593",
       "entrypoint": [
@@ -409,7 +405,6 @@
       "name": "concourse-db",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "concourse-db",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-concourse-db:81eb237a951137f5dc4f0d7ee8b269b80bb48362",
       "min_RAM_mb": 256,
@@ -455,7 +450,6 @@
       "name": "registry-mirror",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "registry-mirror",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-docker-registry:f71db0fe3bc9164b20d95c7ab603a6dc8005c969",
       "min_RAM_mb": 256,
@@ -505,7 +499,6 @@
       "name": "concourse-worker-1",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "concourse-worker-1",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-concourse-bin:7163c9fd4f1c0903447a75a07b43e9108ebc94b7",
       "entrypoint": [
@@ -565,7 +558,6 @@
       "name": "concourse-worker-2",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "concourse-worker-2",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-concourse-bin:7163c9fd4f1c0903447a75a07b43e9108ebc94b7",
       "entrypoint": [
@@ -625,7 +617,6 @@
       "name": "concourse-worker-3",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "concourse-worker-3",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-concourse-bin:7163c9fd4f1c0903447a75a07b43e9108ebc94b7",
       "entrypoint": [
@@ -685,7 +676,6 @@
       "name": "concourse-web",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "concourse-web",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-concourse-bin:7163c9fd4f1c0903447a75a07b43e9108ebc94b7",
       "entrypoint": [
@@ -748,7 +738,6 @@
       "name": "hce-watchdog",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "hce-watchdog",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-rest-service:06d539503f36e49975239097716847378b6c2c2a",
       "entrypoint": [
@@ -807,7 +796,6 @@
       "name": "hce-rest",
       "version": "1.0.0",
       "vendor": "HPE",
-      "external_name": "hce-rest",
       "repository":"docker-registry.helion.space:443",
       "image": "hce-rest-service:06d539503f36e49975239097716847378b6c2c2a",
       "entrypoint": [

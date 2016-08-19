@@ -33,9 +33,6 @@
                     "vendor": {
                         "type": "string"
                     },
-                    "external_name": {
-                        "type": "string"
-                    },
                     "image": {
                         "type": "string"
                     },
@@ -109,7 +106,6 @@
                     "name",
                     "version",
                     "vendor",
-                    "external_name",
                     "image"
                 ],
                 "additionalProperties": false

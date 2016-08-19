@@ -8,7 +8,6 @@
             "name": "cnap-jumpbox",
             "version": "latest",
             "vendor": "HPE",
-            "external_name": "cnap-jumpbox",
             "image": "suranasaurabh/jumpbox-container:latest",
             "min_RAM_mb": 50,
             "min_disk_gb": 1,

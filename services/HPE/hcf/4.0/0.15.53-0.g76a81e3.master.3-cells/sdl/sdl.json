@@ -538,7 +538,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "nats",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -1021,7 +1020,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "nats-1",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -1504,7 +1502,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "nats-2",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -2026,7 +2023,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "consul",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -2527,7 +2523,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "mysql",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -3016,7 +3011,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "mysql-proxy",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -3524,7 +3518,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-database",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -4020,7 +4013,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "ha-proxy",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -4494,7 +4486,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "router",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -5046,7 +5037,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "routing-ha-proxy",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -5520,7 +5510,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "routing-api",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -6002,7 +5991,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "uaa",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -6489,7 +6477,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "api",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -6977,7 +6964,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "api-1",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -7449,7 +7435,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "api-worker",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -7936,7 +7921,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "blobstore",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -8403,7 +8387,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "clock-global",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -8890,7 +8873,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "cf-usb",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -9379,7 +9361,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "doppler",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -9866,7 +9847,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "etcd",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -10348,7 +10328,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "loggregator",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -10823,7 +10802,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-brain",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -11361,7 +11339,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-cc-bridge",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -11828,7 +11805,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-route-emitter",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -12310,7 +12286,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-access",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -12784,7 +12759,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-cell",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -13259,7 +13233,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-cell-1",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -13734,7 +13707,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-cell-2",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -14209,7 +14181,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "sclr-api",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -14684,7 +14655,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "sclr-server",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -15159,7 +15129,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "sclr-broker",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -15634,7 +15603,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "couchdb",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -16101,7 +16069,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "diego-debugger",
             "workload_type": "container"
         },
         {
@@ -16569,7 +16536,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "hcf-sso",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -17044,7 +17010,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "status-route",
             "workload_type": "container",
             "entrypoint": [
                 "/usr/bin/env",
@@ -19107,7 +19072,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "post-deployment-setup",
             "workload_type": "container",
             "retry_count": 5,
             "entrypoint": [
@@ -19575,7 +19539,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "sso-create-service",
             "workload_type": "container",
             "retry_count": 5,
             "entrypoint": [
@@ -20043,7 +20006,6 @@
                     "name": "uaa-clients-cf-autoscaler-secret"
                 }
             ],
-            "external_name": "autoscaler-create-service",
             "workload_type": "container",
             "retry_count": 5,
             "entrypoint": [

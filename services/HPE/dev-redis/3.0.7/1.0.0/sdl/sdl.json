@@ -7,7 +7,6 @@
   "components": [
     {
       "name": "redis",
-      "external_name": "redis",
       "workload_type": "container",
       "version": "latest",
       "vendor": "HPE",
@@ -62,7 +61,6 @@
     },
     {
       "name": "csm-side-car",
-      "external_name": "redis-csm-side-car",
       "workload_type": "container",
       "version": "latest",
       "vendor": "HPE",
