@@ -26,14 +26,14 @@ SERVICE_VERSION=latest
 
 for file_path in `grep -l ${REGISTRY_LOCATION} services/HPE/${SERVICE_NAME} -r`
 do
-	grep ${REGISTRY_LOCATION} ${file_path} | grep csm
+	grep ${REGISTRY_LOCATION} ${file_path} | grep hsm-sidecar
 	if [ $? -eq 0 ]; then
 		#darwin
 		if [ "$OS_VERSION" = "darwin" ]; then
-			sed -i '.original' "\|${REGISTRY_LOCATION}/catalog-service-manager/csm|s|${IMAGE_TAG}|${APP_VERSION_TAG}|gwp" ${file_path}
+			sed -i '.original' "\|${REGISTRY_LOCATION}/hsm-sidecar/sidecar|s|${IMAGE_TAG}|${APP_VERSION_TAG}|gwp" ${file_path}
 			sed -i '.updated_image' "\|version|s|${SERVICE_VERSION}|${VERSION}|gwp" ${file_path}
 		elif [ "$OS_VERSION" = "linux" ]; then
-			sed -i "\|${REGISTRY_LOCATION}/catalog-service-manager/csm|s|${IMAGE_TAG}|${APP_VERSION_TAG}|g" ${file_path}
+			sed -i "\|${REGISTRY_LOCATION}/hsm-sidecar/sidecar|s|${IMAGE_TAG}|${APP_VERSION_TAG}|g" ${file_path}
 			sed -i "\|version|s|${SERVICE_VERSION}|${VERSION}|g" ${file_path}
 		fi
 

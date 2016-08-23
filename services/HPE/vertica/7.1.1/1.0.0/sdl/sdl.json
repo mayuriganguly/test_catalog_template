@@ -48,10 +48,10 @@
             ]
         },
         {
-            "name": "csm-side-car",
+            "name": "hsm-side-car",
             "version": "1.0",
             "vendor": "HPE",
-            "image": "docker-registry.helion.space:443/service-catalog/catalog-service-manager:latest",
+            "image": "docker-registry.helion.space:443/hsm-sidecar/sidecar:latest",
             "min_RAM_mb": 50,
             "min_disk_gb": 1,
             "min_VCPU": 1,
@@ -61,14 +61,14 @@
             "affinity": [],
             "labels": [
                 "vertica",
-                "csm"
+                "hsm-sidecar"
             ],
             "min_instances": 1,
             "max_instances": 1,
             "retry_count": 5,
             "service_ports": [
                 {
-                    "name": "csm-api",
+                    "name": "sidecar-api",
                     "protocol": "TCP",
                     "source_port": 8081,
                     "target_port": 8081,
@@ -77,17 +77,17 @@
             ],
             "parameters": [
                 {
-                    "name": "CSM_API_KEY"
+                    "name": "SIDECAR_API_KEY"
                 }
             ]
         }
     ],
     "parameters": [
         {
-            "name": "CSM_API_KEY",
-            "description": "CSM side-car api key",
-            "default": "csm-auth-token",
-            "example": "csm-auth-token",
+            "name": "SIDECAR_API_KEY",
+            "description": "HSM side-car api key",
+            "default": "sidecar-auth-token",
+            "example": "sidecar-auth-token",
             "data_type": "string",
             "required": true,
             "secret": false

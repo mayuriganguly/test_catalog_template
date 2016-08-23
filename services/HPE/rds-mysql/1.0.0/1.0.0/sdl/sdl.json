@@ -6,23 +6,23 @@
   "volumes": [],
   "components": [
     {
-      "name": "csm-side-car",
+      "name": "hsm-side-car",
       "workload_type": "container",
       "version": "latest",
       "vendor": "HPE",
-      "image": "docker-registry.helion.space:443/catalog-service-manager/csm-dev-mysql:latest",
+      "image": "docker-registry.helion.space:443/hsm-sidecar/sidecar-dev-mysql:latest",
       "min_RAM_mb": 50,
       "min_disk_gb": 1,
       "min_VCPU": 1,
       "platform": "linux-x86_64",
       "capabilities": [],
       "affinity": [],
-      "labels": ["mysql-csm"],
+      "labels": ["mysql-hsm-side-car"],
       "min_instances": 1,
       "max_instances": 1,
       "service_ports": [
         {
-          "name": "mysql-csm",
+          "name": "mysql-sidecar",
           "protocol": "TCP",
           "source_port": 8081,
           "target_port": 8081,
@@ -44,7 +44,7 @@
           "name": "SERVICE_MYSQL_PASS"
         },
         {
-          "name": "CSM_API_KEY"
+          "name": "SIDECAR_API_KEY"
         }
       ]
     }
@@ -81,7 +81,7 @@
       "secret": false
     },
     {
-      "name": "CSM_API_KEY",
+      "name": "SIDECAR_API_KEY",
       "description": "API Key used to authenticate consumers of the sidecar API",
       "example": "my-secret-key",
       "required": true,

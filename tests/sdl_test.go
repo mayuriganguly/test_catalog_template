@@ -160,9 +160,9 @@ func TestSDLsAreValid(t *testing.T) {
 					for _, comp := range s.Components {
 						compNames = append(compNames, comp.Name)
 
-						if comp.Name == "csm-side-car" {
-							p := componentParameter{Name: "CSM_API_KEY"}
-							assert.Contains(t, comp.Parameters, p, "CSM_API_KEY is not present in csm-side-car component")
+						if comp.Name == "hsm-side-car" {
+							p := componentParameter{Name: "SIDECAR_API_KEY"}
+							assert.Contains(t, comp.Parameters, p, "SIDECAR_API_KEY is not present in hsm-side-car component")
 						}
 
 						//log a warning if component has "ALL" capabilities set

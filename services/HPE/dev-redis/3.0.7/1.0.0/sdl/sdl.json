@@ -10,7 +10,7 @@
       "workload_type": "container",
       "version": "latest",
       "vendor": "HPE",
-      "image": "docker-registry.helion.space:443/catalog-service-manager/csm-dev-redis-db:latest",
+      "image": "docker-registry.helion.space:443/hsm-sidecar/sidecar-dev-redis-db:latest",
       "min_RAM_mb": 512,
       "min_disk_gb": 1,
       "min_VCPU": 1,
@@ -60,23 +60,23 @@
       ]
     },
     {
-      "name": "csm-side-car",
+      "name": "hsm-side-car",
       "workload_type": "container",
       "version": "latest",
       "vendor": "HPE",
-      "image": "docker-registry.helion.space:443/catalog-service-manager/csm-dev-redis:latest",
+      "image": "docker-registry.helion.space:443/hsm-sidecar/sidecar-dev-redis:latest",
       "min_RAM_mb": 50,
       "min_disk_gb": 1,
       "min_VCPU": 1,
       "platform": "linux-x86_64",
       "capabilities": [],
       "affinity": [],
-      "labels": ["redis-csm"],
+      "labels": ["redis-sidecar"],
       "min_instances": 1,
       "max_instances": 1,
       "service_ports": [
         {
-          "name": "redis-csm",
+          "name": "redis-sidecar",
           "protocol": "TCP",
           "source_port": 8081,
           "target_port": 8081,
@@ -89,7 +89,7 @@
           "name": "DOCKER_IMAGE"
         },
         {
-          "name": "CSM_API_KEY"
+          "name": "SIDECAR_API_KEY"
         },
         {
           "name": "DOCKER_IMAGE_TAG"
@@ -101,10 +101,10 @@
           "name": "REDIS_SERVICE_PORTS_POOL_END"
         },
         {
-          "name": "CSM_EXT_TIMEOUT"
+          "name": "SIDECAR_EXT_TIMEOUT"
         },
         {
-          "name": "CSM_EXT_TIMEOUT_ERROR"
+          "name": "SIDECAR_EXT_TIMEOUT_ERROR"
         }
       ]
     }
@@ -143,23 +143,23 @@
       "default": "3.0.7"
     },
     {
-      "name": "CSM_EXT_TIMEOUT",
-      "description": "CSM timeout in seconds. If you don't know what to put here, leave it default.",
+      "name": "SIDECAR_EXT_TIMEOUT",
+      "description": "HSM sidecar timeout in seconds. If you don't know what to put here, leave it default.",
       "example": "300",
       "required": true,
       "secret": false,
       "default": "300"
     },
     {
-      "name": "CSM_EXT_TIMEOUT_ERROR",
-      "description": "CSM timeout for errors in seconds. If you don't know what to put here, leave it default.",
+      "name": "SIDECAR_EXT_TIMEOUT_ERROR",
+      "description": "HSM sidecar timeout for errors in seconds. If you don't know what to put here, leave it default.",
       "example": "30",
       "required": true,
       "secret": false,
       "default": "30"
     },
     {
-      "name": "CSM_API_KEY",
+      "name": "SIDECAR_API_KEY",
       "description": "API Key used to authenticate consumers of the sidecar API",
       "example": "my-secret-key",
       "required": true,
