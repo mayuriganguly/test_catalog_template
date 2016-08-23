@@ -1,7 +1,7 @@
 {
 	"ImportPath": "github.com/hpcloud/catalog-templates",
-	"GoVersion": "go1.5",
-	"GodepVersion": "v70",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v74",
 	"Packages": [
 		"./..."
 	],
