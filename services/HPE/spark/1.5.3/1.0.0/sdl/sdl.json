@@ -1,0 +1,172 @@
+{
+    "name": "spark",
+    "product_version": "1.5.3",
+    "sdl_version": "1.0.0",
+    "vendor": "HPE",
+    "components": [
+        {
+            "name": "spark-master",
+            "version": "1.5.2",
+            "vendor": "Apache",
+            "image": "gcr.io/google_containers/spark-master",
+            "min_RAM_mb": 256,
+            "min_disk_gb": 1,
+            "min_VCPU": 1,
+            "platform": "linux-x86_64",
+            "workload_type": "container",
+            "capabilities": [],
+            "affinity": [],
+            "labels": [
+                "spark"
+            ],
+            "min_instances": 1,
+            "max_instances": 1,
+            "retry_count": 5,
+            "service_ports": [
+                {
+                    "name": "web",
+                    "protocol": "TCP",
+                    "source_port": 8080,
+                    "target_port": 8080,
+                    "public": true
+                },
+                {
+                    "name": "sparkmaster",
+                    "protocol": "TCP",
+                    "source_port": 7077,
+                    "target_port": 7077,
+                    "public": false
+                }
+            ]
+        },
+        {
+            "name": "spark-worker",
+            "version": "1.5.2",
+            "vendor": "Apache",
+            "image": "gcr.io/google_containers/spark-worker",
+            "min_RAM_mb": 256,
+            "min_disk_gb": 1,
+            "min_VCPU": 1,
+            "platform": "linux-x86_64",
+            "workload_type": "container",
+            "capabilities": [],
+            "affinity": [],
+            "labels": [
+                "spark"
+            ],
+            "min_instances": 2,
+            "max_instances": 10,
+            "retry_count": 5,
+            "service_ports": [
+                {
+                    "name": "spark",
+                    "protocol": "TCP",
+                    "source_port": 8888,
+                    "target_port": 8888,
+                    "public": false
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "SPARK_WORKER_PORT"
+                }
+            ]
+        },
+        {
+            "name": "zeppelin",
+            "version": "0.5.6-incubating",
+            "vendor": "Apache",
+            "image": "gcr.io/google_containers/zeppelin",
+            "min_RAM_mb": 256,
+            "min_disk_gb": 1,
+            "min_VCPU": 1,
+            "platform": "linux-x86_64",
+            "workload_type": "container",
+            "capabilities": [],
+            "affinity": [],
+            "labels": [
+                "spark"
+            ],
+            "min_instances": 1,
+            "max_instances": 1,
+            "retry_count": 5,
+            "service_ports": [
+                {
+                    "name": "spark",
+                    "protocol": "TCP",
+                    "source_port": 8080,
+                    "target_port": 8080,
+                    "public": true
+                }
+            ]
+        },
+        {
+            "name": "hsm-side-car",
+            "version": "1.0",
+            "vendor": "HPE",
+            "image": "docker-registry.helion.space:443/hsm-sidecar/sidecar:latest",
+            "min_RAM_mb": 50,
+            "min_disk_gb": 1,
+            "min_VCPU": 1,
+            "platform": "linux-x86_64",
+            "workload_type": "container",
+            "capabilities": [],
+            "affinity": [],
+            "labels": [
+                "spark",
+                "hsm-sidecar"
+            ],
+            "min_instances": 1,
+            "max_instances": 1,
+            "retry_count": 5,
+            "service_ports": [
+                {
+                    "name": "sidecar-api",
+                    "protocol": "TCP",
+                    "source_port": 8081,
+                    "target_port": 8081,
+                    "public": false
+                }
+            ],
+            "parameters": [
+                {
+                    "name": "SIDECAR_API_KEY"
+                },
+                {
+                    "name": "SPARK_WORKER_PORT"
+                },
+                {
+                    "name": "SIDECAR_PARAMETERS"
+                }
+            ]
+        }
+    ],
+    "parameters": [
+        {
+            "name": "SPARK_WORKER_PORT",
+            "description": "Set the worker port for Spark",
+            "default": "8888",
+            "example": "8888",
+            "data_type": "int32",
+            "required": true,
+            "secret": false
+        },
+        {
+            "name": "SIDECAR_PARAMETERS",
+            "description": "Parameters for the HSM side-car to be supplied to application on bind",
+            "data_type": "string",
+            "default": "SPARK_WORKER_PORT",
+            "required": true,
+            "secret": false
+        },
+        {
+            "name": "SIDECAR_API_KEY",
+            "description": "HSM side-car api key",
+            "default": "sidecar-auth-token",
+            "example": "sidecar-auth-token",
+            "data_type": "string",
+            "required": true,
+            "secret": false
+        }
+    ]
+}
