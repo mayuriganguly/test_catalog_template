@@ -31,7 +31,7 @@
           "protocol": "TCP",
           "source_port": 27017,
           "target_port": 27017,
-          "public": false
+          "public": true
         }
       ],
       "volume_mounts": [{
