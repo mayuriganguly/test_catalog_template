@@ -64,7 +64,7 @@
           "protocol": "TCP",
           "source_port": 8081,
           "target_port": 8081,
-          "public": false
+          "public": true
         }
       ],
       "volume_mounts": [],
