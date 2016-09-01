@@ -22,7 +22,7 @@
       "max_instances": 1,
       "service_ports": [
         {
-          "name": "postgres-sidecar",
+          "name": "pgsql-sidecar",
           "protocol": "TCP",
           "source_port": 8081,
           "target_port": 8081,
