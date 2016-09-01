@@ -27,7 +27,7 @@
       "max_instances": 1,
       "service_ports": [
         {
-          "name": "postgres",
+          "name": "pgsql",
           "protocol": "TCP",
           "source_port": 5432,
           "target_port": 5432,
